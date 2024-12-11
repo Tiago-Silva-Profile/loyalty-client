@@ -1,0 +1,9 @@
+.sidebar {
+  width: 250px; /* Largura fixa do menu lateral */
+  background-color: #f8f9fa; /* Cor de fundo do menu */
+  border-right: 1px solid #dee2e6; /* Linha divisória */
+}
+
+.content {
+  padding: 20px; /* Espaçamento interno */
+}

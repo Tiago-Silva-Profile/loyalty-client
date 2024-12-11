@@ -1,0 +1,9 @@
+/* Ajustes de estilo para o componente */
+.card {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.card-body {
+  padding: 20px;
+}
