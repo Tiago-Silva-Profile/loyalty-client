@@ -1,0 +1,20 @@
+.container {
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+  color: #343a40;
+}
+
+h5 {
+  color: #495057;
+}
+
+button:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
