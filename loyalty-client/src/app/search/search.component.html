@@ -1,0 +1,54 @@
+<div class="container mt-5">
+  <h2 class="text-center mb-4">Pesquisar Cliente</h2>
+  <div class="card shadow p-4">
+    <form (ngSubmit)="searchClient()">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="mb-3">
+            <label for="cpf" class="form-label">CPF do Cliente</label>
+            <input
+              type="text"
+              class="form-control"
+              id="cpf"
+              placeholder="Digite o CPF"
+              [(ngModel)]="searchCriteria.cpf"
+              name="cpf"
+              pattern="\\d{11}"
+              maxlength="11">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="mb-3">
+            <label for="placa" class="form-label">Placa do Veículo</label>
+            <input
+              type="text"
+              class="form-control"
+              id="placa"
+              placeholder="Digite a Placa"
+              [(ngModel)]="searchCriteria.placa"
+              name="placa"
+              maxlength="7">
+          </div>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center">
+        <button type="submit" class="btn btn-primary w-50">Pesquisar</button>
+      </div>
+    </form>
+  </div>
+
+  <div *ngIf="result" class="mt-5">
+    <h3 class="text-center">Resultado da Pesquisa</h3>
+    <div class="card shadow p-4">
+      <p><strong>Nome:</strong> {{ result.nome }}</p>
+      <p><strong>CPF:</strong> {{ result.cpf }}</p>
+      <p><strong>Placa:</strong> {{ result.placa }}</p>
+      <p><strong>Modelo do Veículo:</strong> {{ result.modelo }}</p>
+      <p><strong>Ano:</strong> {{ result.ano }}</p>
+    </div>
+  </div>
+
+  <div *ngIf="!result && hasSearched" class="mt-5">
+    <h4 class="text-center text-danger">Nenhum resultado encontrado.</h4>
+  </div>
+</div>

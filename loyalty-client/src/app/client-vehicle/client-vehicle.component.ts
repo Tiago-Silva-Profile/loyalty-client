@@ -16,6 +16,7 @@ export class ClientVehicleComponent {
     name: '',
     cpf: '',
     phone: '',
+    phoneW: '',
     email: '',
     address: ''
   };
@@ -37,6 +38,7 @@ export class ClientVehicleComponent {
       name: '',
       cpf: '',
       phone: '',
+      phoneW: '',
       email: '',
       address: ''
     };
